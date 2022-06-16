@@ -24,3 +24,12 @@ py manage.py runserver
 
 se creo .gitignore para ignorar carpetas o 
 archivos con info que no queremos pasarles a otros
+
+
+un paso a paso, por si alguien se perdió (una vez generado el entorno virtual):
+1) pip install django
+2) git init
+3) crear el .gitignore
+3) django-admin startproject nombredeproyecto
+4) python manage.py migrate
+5) python manage.py runserver
