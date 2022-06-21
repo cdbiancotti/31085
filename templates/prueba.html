@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
-</head>
-<body>
-    Este es mi inicio
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Template</title>
+    </head>
+    <body>
+        <p>Este es el inicio de la pagina de {{nombre}} {{apellido}}</p>
+        {% if edad < 4500 %}
+        <p>Esta momia tiene menor edad que 4500.</p>
+        {% elif edad < 5500 %}
+        <p>Esta momia tiene menor edad que 5500.</p>
+        {% else %}
+        <p>Esta momia tiene mas edad que 5499.</p>
+        {% endif %}
+        <ul>
+            {% for valor in lista %}
+            <li>Estudiante: {{valor}}</li>
+            {% endfor %}
+        </ul>
+        <p>
+            Info del perro:
+            <ul>
+                <li>{{perro.nombre}}</li>
+                <li>{{perro.edad}}</li>
+            </ul>
+        </p>
+    </body>
 </html>
